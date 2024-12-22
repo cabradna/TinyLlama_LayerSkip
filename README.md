@@ -6,8 +6,8 @@ This repository contains the code for implementing LayerSkip training on the Tin
 
 LayerSkip is a technique for accelerating the training and inference of large language models. It involves two main components:
 
-1. **Layer Dropout:** Randomly dropping out entire transformer layers during training to encourage the model to learn more efficient representations.
-2. **Early Exiting:** Allowing the model to exit early at intermediate layers during both training and inference, based on a confidence criterion.
+1. **Layer Dropout:** Dropping out transformer layers during training according to a dropout schedule to encourage the model to learn more efficient representations.
+2. **Early Exiting:** Allowing the model to exit early at intermediate layers during both training and inference to the LM head. This encourages the model to learn more efficient representations of the data in earlier layers.
 
 This project focuses on implementing LayerSkip for training TinyLlama, a 1.1B parameter language model. The code includes implementations of layer dropout and early exit loss, as well as a curriculum for gradually increasing the dropout rate and enabling early exits.
 
